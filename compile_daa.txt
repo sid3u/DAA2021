@@ -1,0 +1,1 @@
+g++ -o DAA.exe DAA.cpp File.cpp Node.cpp NodeOperation.cpp NodeOperationAND.cpp NodeOperationOR.cpp NodeSearch.cpp PathCommand.cpp pch.cpp Technical.cpp Tool.cpp
