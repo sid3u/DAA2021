@@ -132,6 +132,7 @@ vector<Technical*> Tool::getTecnicals() {
 	Node *node;
 
 	std::string line;
+	std::string line2;
 
 	std::string balise;
 	std::string balise_content;
@@ -142,9 +143,10 @@ vector<Technical*> Tool::getTecnicals() {
 	std::string chaine_de_caracteres = "";
 
 	std::ifstream file("techniques.xml");
+	std::ifstream file2("techniques3.xml");
 
 	//On parcourt le fichier
-	if (file.is_open()) {
+	if (file.is_open() && file2.is_open()) {
 
 		//La toute premi�re technique :
 		/*
@@ -154,7 +156,7 @@ vector<Technical*> Tool::getTecnicals() {
 		*/
 
 		//On r�cup�re chaque ligne du fichier XML
-		while (getline(file, line)) {
+		while (getline(file, line) && getline(file2, line2)) {
 
 			//FONCTIONNEL
 			//Si c'est une balise technique (le d�but de la technique)
@@ -206,6 +208,10 @@ vector<Technical*> Tool::getTecnicals() {
 					function = get_balise_content(line);
 					//std::cout << "function : " << function << std::endl;
 					
+					if(get_raw_balise(line2) == "string"){
+						node = new NodeOperationOR(new NodeSearch(function), node);
+						//std::cout << "node = new NodeOperationOR(new NodeSearch("<<function<<"), node);"<< std::endl;
+					}
 					if(lib != ""){		//S'il existe une librairie
 						//std::cout << "node = new NodeOperationOR(new NodeSearch("<<function<<"), node);"<< std::endl;
 						node = new NodeOperationOR(new NodeSearch(function), node);		//On cr�e un OU logique avec le noeud pr�c�dent et le nouveau
@@ -220,6 +226,7 @@ vector<Technical*> Tool::getTecnicals() {
 							//std::cout << "node = new NodeSearch("<<function<<", node);"<< std::endl;
 						}
 					}
+					
 
 					nb_nodes++;	//On incr�mente ici car dans tous les cas on cr�e un nouveau noeud
 					
@@ -249,6 +256,7 @@ vector<Technical*> Tool::getTecnicals() {
 		}
 
 		file.close();
+		file2.close();
 	}
 	//std::cout << "Termine !" << std::endl;
 	return technicals;
