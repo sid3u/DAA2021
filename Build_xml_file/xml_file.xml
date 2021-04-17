@@ -12,7 +12,7 @@ http://www.geoffchappell.com/studies/windows/win32/kernel32/api/index.htm
 	<!--
     <md5 bl="1">5CE8DE7A4FF8849D59B13DF2A4E2C31DC</md5>
     -->
-
+	
 	<!-- libraries by name -->
 	<lib name="msxfs.dll" group="--" bl="1" dp="0">Extension for Financial Services (XFS)</lib>
 	<lib name="xfs_conf.dll" group="--" bl="1" dp="0">Extension for Financial Services (XFS)</lib>

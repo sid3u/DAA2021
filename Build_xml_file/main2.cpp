@@ -123,6 +123,7 @@ void create_file() {
 
 	std::ofstream file_to_write("techniques2.xml");		//Notre nouveau fichier XML
 
+
 	int id = 295;
 
 	//On parcourt le fichier
