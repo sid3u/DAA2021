@@ -8260,7 +8260,11 @@ http://www.geoffchappell.com/studies/windows/win32/kernel32/api/index.htm
     <util>wireshark</util>
     <util ti="1105">wget</util>
     <util>write</util>
+<<<<<<< HEAD
     <util ti="1047">wmic</util>
+=======
+    <util tu="1047">wmic</util>
+>>>>>>> f64c0c08fb3437fd9319a659e1f222df0fe6885f
     <util>wer</util>
     <util>wil</util>
     <util>wscript.shell</util>
