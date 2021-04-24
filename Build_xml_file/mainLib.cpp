@@ -4,8 +4,7 @@
 #include <sstream>
 #include <vector>
 #include <algorithm>
-#include <list>
-#include <array>
+
 //Liste des balises dans lesquelles chercher le contenu pour le fichier strings.xml (folder est un cas particulier puisqu'il faut r�cup�rer aussi le nom).
 //Pour chaque balise faire un autre vecteur qui contient une br�ve description de chaque balise ?
 std::vector<std::string> balises = { "psws", "avs", "regexs", "privs", "oids", "agents", "exts", "sddls", "guids", "regs", "oss", "products", "sids", "offices", "prots" , "utils", "keys", "dosstubs", "strings" };
@@ -93,33 +92,6 @@ std::string get_balise_id(std::string line) {
 	return balise_id;
 }
 
-std::vector<std::string> str_list = {};
-std::vector<std::string> str_list_fct = {};
-void list_string(){
-    std::string line;
-	std::string lib_name = "";
-	std::string fct_name;
-	std::ifstream file("xml_file.xml");
-    
-    if (file.is_open()) {
-
-		
-			//On range dans une liste tous les string
-		while (getline(file, line)) {
-               if (std::find(balises_sans_s.begin(), balises_sans_s.end(), get_raw_balise(line)) != balises_sans_s.end() || std::find(balises_sans_s.begin(), balises_sans_s.end(), get_balise(line)) != balises_sans_s.end()) {
-				fct_name = get_balise_content(line);
-                   str_list.push_back(fct_name);
-               }
-
-				if (get_balise(line) == "fct") {
-					fct_name = get_balise_content(line);
-					str_list_fct.push_back(fct_name);
-				}
-        }
-        
-    }
-                 
-}
 
 void create_file() {
 	std::string line;
@@ -127,30 +99,60 @@ void create_file() {
 	std::string fct_name;
 	std::ifstream file("xml_file.xml");		//Fichier XML qui comporte le contenu des fichiers functions.xml et strings.xml de PeStudio
 
-	std::ofstream file_to_write("techniques3.xml");		//Notre nouveau fichier XML
+	std::ofstream file_to_write("techniquestest.xml");		//Notre nouveau fichier XML
 
-
-	int id = 295;
+	int id = 0;
 
 	//On parcourt le fichier
 	if (file.is_open()) {
 
+		//Dans le fichier on appelle �a technique mais ce n'en sont pas vraiment
 
 		if (file_to_write.is_open()) {
-			file_to_write << "<technique id='" << id << "'>\n";
-			for(const std::string &fct : str_list_fct){
-                 file_to_write << "\t<function>" << fct << "</function>\n";
-               }
-			for(const std::string &s : str_list){
-                file_to_write << "\t<string>" << s << "</string>\n";
-             }
+			//Fonctionne pour le fichier functions.xml et 
+			while (getline(file, line)) {
+
+				//Si c'est une balise lib
+				if (get_balise(line) == "lib") {
+					lib_name = get_balise_name(line);
+					//Si c'est la premi�re ligne alors on ne ferme pas la balise
+					
+					file_to_write << "<lib name=" <<'"'<< lib_name <<'"'<< " id='"<<id << "'>\n";
 
 
-			
+					id++;
+
+					
+				}
+				//Sinon si c'est une fonction alors on va r�cup�rer son contenu
+				else if (get_balise(line) == "fct") {
+					fct_name = get_balise_content(line);
+					file_to_write << "\t<function>" << fct_name << "</function>\n";
+
+				}
+				//On check si la balise est dans le vecteur balises
+				else if (std::find(balises.begin(), balises.end(), get_raw_balise(line)) != balises.end()) {
+
+					//On cr�e une nouvelle technique
+					file_to_write << "</lib>\n<lib name='"<< get_raw_balise(line) << "' id='" << id << "'>\n";
+
+					id++;
+				}
+
+				else if (std::find(balises_sans_s.begin(), balises_sans_s.end(), get_raw_balise(line)) != balises_sans_s.end() || std::find(balises_sans_s.begin(), balises_sans_s.end(), get_balise(line)) != balises_sans_s.end()) {
+
+					fct_name = get_balise_content(line);
+
+					file_to_write << "\t<string>" << fct_name << "</string>\n";
+				}
+
+				
+
+			}
 		}
 
 		//On ferme la derni�re balise
-		file_to_write << "</technique>";
+		file_to_write << "</lib>";
 
 		file_to_write.close();
 		file.close();
@@ -158,7 +160,6 @@ void create_file() {
 }
 
 int main() {
-    list_string();
 	create_file();
 
 	system("PAUSE");

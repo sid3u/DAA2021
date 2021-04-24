@@ -38,6 +38,8 @@ public:
 
 	static string get_balise(string line);
 
+	static string get_balise_name(string line);
+
 	static string get_raw_balise(string line);
 
 	static string get_balise_content(string line);

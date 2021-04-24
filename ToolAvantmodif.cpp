@@ -19,7 +19,7 @@ vector<string> Tool::explode(string const &s, char delim) {
 
 void Tool::buildAssembler(string path) {
 
-	string command = "idag -B \"" + path + "\"";
+	string command = "idaq -B \"" + path + "\"";
 
 	system(command.c_str());
 }
@@ -88,24 +88,6 @@ std::string Tool::get_raw_balise(std::string line) {
 	return balise;
 }
 
-
-//Retourne le contenu de la balise (entre les chevrons)
-std::string Tool::get_balise_name(std::string line) {
-
-	std::istringstream line_stream(line);
-	std::string trash;
-	std::string balise_name;
-
-	//Permet de supprimer les blancs avant la balise
-	std::getline(line_stream, trash, '<');
-	//On r�cup�re la premi�re partie de la balise mais �a ne nous int�resse pas
-	std::getline(line_stream, trash, '"');
-	//On stocke le texte qui se trouve dans la balise (le contenu)
-	std::getline(line_stream, balise_name, '"');
-
-	return balise_name;
-}
-
 //Retourne le contenu de la balise (entre les chevrons)
 std::string Tool::get_balise_content(std::string line) {
 
@@ -148,22 +130,18 @@ vector<Technical*> Tool::getTecnicals() {
 	int id = 0;
 	int nb_nodes = 0;
 	Node *node;
-	Node *nodeString;
+
 	std::string line;
 
 	std::string balise;
 	std::string balise_content;
 
-	std::string lib_name = "";
-	std::string fct_name = "";
-
 	std::string lib = "";
 	std::string function = "";
-	std::string function_string = "";
 	std::string description = "";
 	std::string chaine_de_caracteres = "";
 
-	std::ifstream file("techniquestest.xml");
+	std::ifstream file("techniques.xml");
 
 	//On parcourt le fichier
 	if (file.is_open()) {
@@ -180,80 +158,93 @@ vector<Technical*> Tool::getTecnicals() {
 
 			//FONCTIONNEL
 			//Si c'est une balise technique (le début de la technique)
-			if (get_balise(line) == "lib" || get_raw_balise(line) == "lib") {
+			if (get_balise(line) == "technique" || get_raw_balise(line) == "technique") {
 
-				
-				nb_nodes = 0;
 				//std::cout << "On va créer une nouvelle technique" << std::endl;
 
 				//On récup l'id de cette technique
-				id++;
-				lib_name = get_balise_name(line);
-				
-				node = new NodeSearch(lib_name);
-				technicals.push_back(new Technical(id, lib_name, node));
+				id = std::stoi(get_balise_id(line));
+
+				//On réinitialise le nombre de noeuds à 0
+				nb_nodes = 0;
+
 			}
 			//FONCTIONNEL
 			//On arrive à la fin de la technique. On peut donc la construire
-			else if (get_balise(line) == "/lib" || get_raw_balise(line) == "/lib") {
-		
-				lib_name = "";
+			else if (get_balise(line) == "/technique" || get_raw_balise(line) == "/technique") {
+
+				//Si pas de description alors on prend par défaut le nom de la lib
+				if (description == ""){
+					if(lib == ""){ description = function; }
+					else { description = lib; }
+				}
+
+				technicals.push_back(new Technical(id, description, node));
+				//std::cout << "Création de la technique ... Description : " << description << " avec nombre de noeuds = " << nb_nodes << std::endl;
+
+				//On réinitialise la description. Car si celle-ci est vide c'est qu'il n'y a pas de description et donc on prend par défaut le nom de la lib ???
 				description = "";
+
 				//system("PAUSE");
 			}
 
 			else {
 
-				
-				if (get_raw_balise(line) == "function" && get_balise_content(line) != "") {
+				//std::cout << get_raw_balise(line) << std::endl;
+
+				//Une seule lib pour chaque technique
+				if (get_raw_balise(line) == "lib") {
+					lib = get_balise_content(line);
+					//std::cout << "lib : " << lib << std::endl;
+					node = new NodeSearch(lib); //Ici on ne crée pas de node (premier noeud)
+					//std::cout << "node = new NodeSearch("<<lib<<");" << std::endl;
+					nb_nodes++;	//On incrémente le nombre de noeuds
+
+				}
+				else if (get_raw_balise(line) == "function") {
 					//Pour le moment on utilise juste une variable mais il va falloir stocker dans un vecteur puisqu'on peut avoir plusieurs fonctions
-					function ="		call	ds:" + get_balise_content(line);
-					function_string='"'+get_balise_content(line)+'"';
-					fct_name = get_balise_content(line);
+					function = get_balise_content(line);
 					//std::cout << "function : " << function << std::endl;
 					
-					if(lib_name != ""){		//S'il existe une librairie
+					if(lib != ""){		//S'il existe une librairie
 						//std::cout << "node = new NodeOperationOR(new NodeSearch("<<function<<"), node);"<< std::endl;
-						description = lib_name + " -> " + fct_name;
-						
-						
-						//node = new NodeSearch(function);		//On crée un OU logique avec le noeud précédent et le nouveau
-						//nodeString = new NodeSearch(function_string);
-
-						node = new NodeOperationOR(new NodeSearch(function),(new NodeSearch(function_string)));	
-
-						technicals.push_back(new Technical(id, description, node));
-						//technicals.push_back(new Technical(id, description, nodeString));
+						node = new NodeOperationOR(new NodeSearch(function), node);		//On crée un OU logique avec le noeud précédent et le nouveau
 					}
-					
-					else if (lib_name == ""){ 	
-						description ="No Library " + fct_name;	//Si aucun librairie n'est spécifiée
-						 	//S'il n'existe pas encore de noeuds
-						node = new NodeSearch(function);	//Alors on en crée un nouveau
+					else { 		//Si aucun librairie n'est spécifiée
+						if(nb_nodes < 1){ 	//S'il n'existe pas encore de noeuds
+							node = new NodeSearch(function);	//Alors on en crée un nouveau
 							//std::cout << "node = new NodeSearch("<<function<<");"<< std::endl;
-						technicals.push_back(new Technical(id, description, node));
+						}
+						else {
+							node = new NodeSearch(function, node);		//Sinon on le chaine en ET logique avec le précédent
+							//std::cout << "node = new NodeSearch("<<function<<", node);"<< std::endl;
+						}
 					}
-					
 
 					nb_nodes++;	//On incrémente ici car dans tous les cas on crée un nouveau noeud
 					
 
 				}
-/*
+				//Une seule description pour chaque technique
+				else if (get_raw_balise(line) == "description") {
+					description = get_balise_content(line);
+					//std::cout << "description : " << description << std::endl;
+				}
+
 				else if (get_raw_balise(line) == "string") {
 					chaine_de_caracteres = get_balise_content(line);
-					
-					
-					description = lib_name + " -> " + chaine_de_caracteres;
-					 	//S'il n'existe pas encore de noeuds
-					node = new NodeSearch(chaine_de_caracteres);	//Alors on en crée un nouveau
+					if(nb_nodes < 1){ 	//S'il n'existe pas encore de noeuds
+						node = new NodeSearch(chaine_de_caracteres);	//Alors on en crée un nouveau
 						//std::cout << "node = new NodeSearch("<<chaine_de_caracteres<<");"<< std::endl;
-					technicals.push_back(new Technical(id, description, node));
-					
-					
+					}
+					else {
+						node = new NodeOperationOR(new NodeSearch(chaine_de_caracteres), node);		//On crée un OU logique avec le noeud précédent et le nouveau
+						//std::cout << "node = new NodeOperationOR(new NodeSearch("<<chaine_de_caracteres<<"), node);"<< std::endl;
+					} 
+
 					nb_nodes++;
 					//std::cout << "chaine_de_caracteres : " << chaine_de_caracteres << std::endl;
-				}*/
+				}
 			}
 		}
 

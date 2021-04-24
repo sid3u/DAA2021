@@ -9986,6 +9986,7 @@
 </technique>
 <technique id='292'>
 	<description>if CPU hypervisor field is set using cpuid(0x1)</description>
+	<function>cpuid_is_hypervisor</function>
 	<string>1Fh</string>
 	<string>		cpuid</string>
 </technique>
