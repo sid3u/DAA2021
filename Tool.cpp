@@ -158,6 +158,8 @@ vector<Technical*> Tool::getTecnicals() {
 	std::string fct_name = "";
 
 	std::string lib = "";
+	std::string lib_string = "";
+	std::string lib_string2 = "";
 	std::string function = "";
 	std::string function_string = "";
 	std::string description = "";
@@ -189,9 +191,14 @@ vector<Technical*> Tool::getTecnicals() {
 				//On récup l'id de cette technique
 				id++;
 				lib_name = get_balise_name(line);
+				lib_string='"'+get_balise_name(line)+'"';
+				lib_string2='<'+get_balise_name(line)+'>';
 				
-				node = new NodeSearch(lib_name);
-				technicals.push_back(new Technical(id, lib_name, node));
+				if (lib_name != ""){
+					node = new NodeOperationOR(new NodeSearch(lib_string), new NodeSearch(lib_string2));
+					technicals.push_back(new Technical(id, lib_name, node));
+				}
+				
 			}
 			//FONCTIONNEL
 			//On arrive à la fin de la technique. On peut donc la construire
@@ -220,7 +227,7 @@ vector<Technical*> Tool::getTecnicals() {
 						//node = new NodeSearch(function);		//On crée un OU logique avec le noeud précédent et le nouveau
 						//nodeString = new NodeSearch(function_string);
 
-						node = new NodeOperationOR(new NodeSearch(function),(new NodeSearch(function_string)));	
+						node = new NodeOperationOR(new NodeSearch(function),new NodeSearch(function_string));	
 
 						technicals.push_back(new Technical(id, description, node));
 						//technicals.push_back(new Technical(id, description, nodeString));

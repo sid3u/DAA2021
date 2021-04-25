@@ -134,7 +134,7 @@ void create_file() {
 				else if (std::find(balises.begin(), balises.end(), get_raw_balise(line)) != balises.end()) {
 
 					//On cr�e une nouvelle technique
-					file_to_write << "</lib>\n<lib name='"<< get_raw_balise(line) << "' id='" << id << "'>\n";
+					file_to_write << "</lib>\n<lib name="<<'"'<< get_raw_balise(line) <<'"'<< " id='" << id << "'>\n";
 
 					id++;
 				}
