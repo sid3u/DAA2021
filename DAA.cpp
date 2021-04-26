@@ -7,7 +7,7 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-
+	string res="";
 	cout << "DoubleAntiAnalysis for windows. A Anti anti analysis scanner.\n";
 	cout << "Usage: DoubleAntiAnalysis.exe PATH/malware\n\n";
 
@@ -78,6 +78,18 @@ int main(int argc, char *argv[]) {
 		if (technical->getNode()->isActivate()) {
 
 			cout << technical->getName();
+			//if(technical->getName().find(".dll\n") && !(technical->getName().find(".dll ->")!= string::npos)){
+			//	res = "[CALL LIBRARY]\n";
+			//}
+			if(technical->getName().find(" ->")!= string::npos){
+				res = "[CALL FUNCTION]\n";
+			}
+			else if(technical->getName().find(" :")!= string::npos){
+				res = "[STRING]\n";
+			}
+			else{
+				res = "[CALL LIBRARY]\n";
+			}
 
 		for (int i = 0; i < maxNameSize - (int)technical->getName().size(); i++) {
 
@@ -85,8 +97,11 @@ int main(int argc, char *argv[]) {
 		}
 
 		cout << "\t\t";
-
-			cout << "[TRUE]\n";
+			
+			
+			cout << res;
+			
+			
 			cpt_detection++;
 
 			if (technical->hasAPatch()) {

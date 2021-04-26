@@ -246,12 +246,11 @@ vector<Technical*> Tool::getTecnicals() {
 					
 
 				}
-/*
+
 				else if (get_raw_balise(line) == "string") {
 					chaine_de_caracteres = get_balise_content(line);
 					
-					
-					description = lib_name + " -> " + chaine_de_caracteres;
+					description = lib_name + " : " + chaine_de_caracteres;
 					 	//S'il n'existe pas encore de noeuds
 					node = new NodeSearch(chaine_de_caracteres);	//Alors on en crée un nouveau
 						//std::cout << "node = new NodeSearch("<<chaine_de_caracteres<<");"<< std::endl;
@@ -260,7 +259,7 @@ vector<Technical*> Tool::getTecnicals() {
 					
 					nb_nodes++;
 					//std::cout << "chaine_de_caracteres : " << chaine_de_caracteres << std::endl;
-				}*/
+				}
 			}
 		}
 

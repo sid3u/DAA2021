@@ -116,8 +116,16 @@ void create_file() {
 				if (get_balise(line) == "lib") {
 					lib_name = get_balise_name(line);
 					//Si c'est la premi�re ligne alors on ne ferme pas la balise
+					if (lib_name == "") {
 					
-					file_to_write << "<lib name=" <<'"'<< lib_name <<'"'<< " id='"<<id << "'>\n";
+						file_to_write << "<lib name=" <<'"'<< lib_name <<'"'<< " id='"<<id << "'>\n";
+
+					}
+					else {
+						file_to_write << "</lib>\n<lib name=" <<'"'<< lib_name <<'"'<< " id='"<<id << "'>\n";
+					}
+
+					
 
 
 					id++;
@@ -148,11 +156,11 @@ void create_file() {
 
 				
 
-			}
+			}file_to_write << "</lib>";
 		}
 
 		//On ferme la derni�re balise
-		file_to_write << "</lib>";
+		//file_to_write << "</lib>";
 
 		file_to_write.close();
 		file.close();
