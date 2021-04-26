@@ -1,156 +1,307 @@
+</lib>
 <lib name="msxfs.dll" id='0'>
+</lib>
 <lib name="xfs_conf.dll" id='1'>
+</lib>
 <lib name="metsrv.dll" id='2'>
+</lib>
 <lib name="msvbvm50.dll" id='3'>
+</lib>
 <lib name="bootvid.dll" id='4'>
+</lib>
 <lib name="dsauth.dll" id='5'>
+</lib>
 <lib name="mscat32.dll" id='6'>
+</lib>
 <lib name="ieframe.dll" id='7'>
+</lib>
 <lib name="mtxoci.dll" id='8'>
+</lib>
 <lib name="msoert2.dll" id='9'>
+</lib>
 <lib name="iassam.dll" id='10'>
+</lib>
 <lib name="wlanui.dll" id='11'>
+</lib>
 <lib name="avifil32.dll" id='12'>
+</lib>
 <lib name="regapi.dll" id='13'>
+</lib>
 <lib name="msgina.dll" id='14'>
+</lib>
 <lib name="msdart.dll" id='15'>
+</lib>
 <lib name="sqlunirl.dll" id='16'>
+</lib>
 <lib name="adsldpc.dll" id='17'>
+</lib>
 <lib name="mprddm.dll" id='18'>
+</lib>
 <lib name="mprddm.dll" id='19'>
+</lib>
 <lib name="wpcap.dll" id='20'>
+</lib>
 <lib name="snmpapi.dll" id='21'>
+</lib>
 <lib name="acledit.dll" id='22'>
+</lib>
 <lib name="dciman32.dll" id='23'>
+</lib>
 <lib name="msoeacct.dll" id='24'>
+</lib>
 <lib name="dhcpsapi.dll" id='25'>
+</lib>
 <lib name="azroles.dll" id='26'>
+</lib>
 <lib name="guard32.dll" id='27'>
+</lib>
 <lib name="hotplug.dll" id='28'>
+</lib>
 <lib name="itss.dll" id='29'>
+</lib>
 <lib name="rdpclip.exe" id='30'>
+</lib>
 <lib name="perfctrs.dll" id='31'>
+</lib>
 <lib name="msports.dll" id='32'>
+</lib>
 <lib name="sqlwoa.dll" id='33'>
+</lib>
 <lib name="cdosys.dll" id='34'>
+</lib>
 <lib name="resutils.dll" id='35'>
+</lib>
 <lib name="eappprxy.dll" id='36'>
+</lib>
 <lib name="urlredir.dll" id='37'>
+</lib>
 <lib name="shimeng.dll" id='38'>
+</lib>
 <lib name="apphelp.dll" id='39'>
+</lib>
 <lib name="firewallapi.dll" id='40'>
+</lib>
 <lib name="clusapi.dll" id='41'>
+</lib>
 <lib name="advpack.dll" id='42'>
+</lib>
 <lib name="clfsw32.dll" id='43'>
+</lib>
 <lib name="avrt.dll" id='44'>
+</lib>
 <lib name="gpedit.dll" id='45'>
+</lib>
 <lib name="iisutil.dll" id='46'>
+</lib>
 <lib name="winrnr.dll" id='47'>
+</lib>
 <lib name="nsi.dll" id='48'>
+</lib>
 <lib name="vssapi.dll" id='49'>
+</lib>
 <lib name="dxva2.dll" id='50'>
+</lib>
 <lib name="msdrm.dll" id='51'>
+</lib>
 <lib name="srcore.dll" id='52'>
+</lib>
 <lib name="spp.dll" id='53'>
+</lib>
 <lib name="ndfapi.dll" id='54'>
+</lib>
 <lib name="netutils.dll" id='55'>
+</lib>
 <lib name="slc.dll" id='56'>
+</lib>
 <lib name="rastls.dll" id='57'>
+</lib>
 <lib name="detoured.dll" id='58'>
+</lib>
 <lib name="colbact.dll" id='59'>
+</lib>
 <lib name="nvcuda.dll" id='60'>
+</lib>
 <lib name="zlib1.dll" id='61'>
+</lib>
 <lib name="Update.dll" id='62'>
+</lib>
 <lib name="sbiedll.dll" id='63'>
+</lib>
 <lib name="Spoon-Plugin.dll" id='64'>
+</lib>
 <lib name="Au3Zipc.dll" id='65'>
+</lib>
 <lib name="dwmapi.dll" id='66'>
+</lib>
 <lib name="msident.dll" id='67'>
+</lib>
 <lib name="cfgmgr32.dll" id='68'>
+</lib>
 <lib name="dsprop.dll" id='69'>
+</lib>
 <lib name="adsldp.dll" id='70'>
+</lib>
 <lib name="sfc_os.dll" id='71'>
+</lib>
 <lib name="rpchttp.dll" id='72'>
+</lib>
 <lib name="hid.dll" id='73'>
+</lib>
 <lib name="rasman.dll" id='74'>
+</lib>
 <lib name="msdtcprx.dll" id='75'>
+</lib>
 <lib name="console.dll" id='76'>
+</lib>
 <lib name="msrating.dll" id='77'>
+</lib>
 <lib name="firefox.exe" id='78'>
+</lib>
 <lib name="vmtoolsd.exe" id='79'>
+</lib>
 <lib name="chrome.exe" id='80'>
+</lib>
 <lib name="mshta.exe" id='81'>
+</lib>
 <lib name="logger.exe" id='82'>
+</lib>
 <lib name="dumprep.exe" id='83'>
+</lib>
 <lib name="vmsrvc.exe" id='84'>
+</lib>
 <lib name="vmusrvc.exe" id='85'>
+</lib>
 <lib name="VBoxService.exe" id='86'>
+</lib>
 <lib name="VBoxTray.exe" id='87'>
+</lib>
 <lib name="regedt32.exe" id='88'>
+</lib>
 <lib name="pagefile.exe" id='89'>
+</lib>
 <lib name="outlook.exe" id='90'>
+</lib>
 <lib name="packed.exe" id='91'>
+</lib>
 <lib name="svchostdll.exe" id='92'>
+</lib>
 <lib name="iptools.exe" id='93'>
+</lib>
 <lib name="chrome.exe" id='94'>
+</lib>
 <lib name="client.exe" id='95'>
+</lib>
 <lib name="desktop.exe" id='96'>
+</lib>
 <lib name="adobeflash.exe" id='97'>
+</lib>
 <lib name="win-firewall.exe" id='98'>
+</lib>
 <lib name="winsys32.sys" id='99'>
+</lib>
 <lib name="dwm.exe" id='100'>
+</lib>
 <lib name="msnmsgr.exe" id='101'>
+</lib>
 <lib name="opera.exe" id='102'>
+</lib>
 <lib name="navigator.exe" id='103'>
+</lib>
 <lib name="netscape.exe" id='104'>
+</lib>
 <lib name="pidgin.exe" id='105'>
+</lib>
 <lib name="java.exe" id='106'>
+</lib>
 <lib name="jucheck.exe" id='107'>
+</lib>
 <lib name="SkypePM.exe" id='108'>
+</lib>
 <lib name="seamonkey.exe" id='109'>
+</lib>
 <lib name="thunderbird.exe" id='110'>
+</lib>
 <lib name="devenv.exe" id='111'>
+</lib>
 <lib name="steam.exe" id='112'>
+</lib>
 <lib name="wininit.exe" id='113'>
+</lib>
 <lib name="stub32.exe" id='114'>
+</lib>
 <lib name="wmiprvse.exe" id='115'>
+</lib>
 <lib name="ulib.dll" id='116'>
+</lib>
 <lib name="osuninst.dll" id='117'>
+</lib>
 <lib name="ifsutil.dll" id='118'>
+</lib>
 <lib name="logonui.exe" id='119'>
+</lib>
 <lib name="spoolsv.exe" id='120'>
+</lib>
 <lib name="alg.exe" id='121'>
+</lib>
 <lib name="recycled.exe" id='122'>
+</lib>
 <lib name="iprip.exe" id='123'>
+</lib>
 <lib name="Updater.exe" id='124'>
+</lib>
 <lib name="Binder.exe" id='125'>
+</lib>
 <lib name="rsh.exe" id='126'>
+</lib>
 <lib name="rexec.exe" id='127'>
+</lib>
 <lib name="ncpa.cpl" id='128'>
+</lib>
 <lib name="hhctrl.ocx" id='129'>
+</lib>
 <lib name="mso.dll" id='130'>
+</lib>
 <lib name="fltMgr.sys" id='131'>
+</lib>
 <lib name="cmpbk32.dll" id='132'>
+</lib>
 <lib name="qutil.dll" id='133'>
+</lib>
 <lib name="upnphost.dll" id='134'>
+</lib>
 <lib name="hlink.dll" id='135'>
+</lib>
 <lib name="inseng.dll" id='136'>
+</lib>
 <lib name="winupd.exe" id='137'>
+</lib>
 <lib name="scrrun.dll" id='138'>
+</lib>
 <lib name="wwlib.dll" id='139'>
+</lib>
 <lib name="ppcore.dll" id='140'>
+</lib>
 <lib name="rtm.dll" id='141'>
+</lib>
 <lib name="cryptdlg.dll" id='142'>
+</lib>
 <lib name="authz.dll" id='143'>
+</lib>
 <lib name="cygcrypto-1.0.0.dll" id='144'>
+</lib>
 <lib name="ncrypt.dll" id='145'>
+</lib>
 <lib name="wdigest.dll" id='146'>
+</lib>
 <lib name="rsaenh.dll" id='147'>
+</lib>
 <lib name="System.Security.Cryptography" id='148'>
+</lib>
 <lib name="schannel.dll" id='149'>
 	<function>SslFreeCertificate</function>
 	<function>SslGenerateRandomBits</function>
 	<function>SslGetServerIdentity</function>
+</lib>
 <lib name="lz32.dll" id='150'>
 	<function>LZRead</function>
 	<function>LZCopy</function>
@@ -158,15 +309,18 @@
 	<function>LZSeek</function>
 	<function>LZStart</function>
 	<function>LZClose</function>
+</lib>
 <lib name="certcli.dll" id='151'>
 	<function>CACloseCertType</function>
 	<function>CAEnumNextC</function>
 	<function>CAEnumFirstC</function>
 	<function>CADeleteC</function>
 	<function>CACloseC</function>
+</lib>
 <lib name="oleacc.dll" id='152'>
 	<function>AccessibleObjectFromWindow</function>
 	<function>CreateStdAccessibleObject</function>
+</lib>
 <lib name="ndis.sys" id='153'>
 	<function>NdisFreeMemory</function>
 	<function>NdisAllocateBuffer</function>
@@ -188,6 +342,7 @@
 	<function>NdisTerminateWrapper</function>
 	<function>NdisMRegisterMiniport</function>
 	<function>NdisInitializeWrapper</function>
+</lib>
 <lib name="bcrypt.dll" id='154'>
 	<function>BCryptOpenAlgorithmProvider</function>
 	<function>BCryptSetProperty</function>
@@ -196,6 +351,7 @@
 	<function>BCryptCloseAlgorithmProvider</function>
 	<function>BCryptDecrypt</function>
 	<function>BCryptDestroyKey</function>
+</lib>
 <lib name="dbnmpntw.dll" id='155'>
 	<function>ConnectionObjectSize</function>
 	<function>ConnectionRead</function>
@@ -213,6 +369,7 @@
 	<function>ConnectionOpen</function>
 	<function>ConnectionError</function>
 	<function>ConnectionServerEnum</function>
+</lib>
 <lib name="activeds.dll" id='156'>
 	<function>ADsGetLastError</function>
 	<function>ADsGetObject</function>
@@ -223,6 +380,7 @@
 	<function>ADsBuildVarArrayInt</function>
 	<function>ADsOpenObject</function>
 	<function>FreeADsMem</function>
+</lib>
 <lib name="samlib.dll" id='157'>
 	<function>SamEnumerateDomainsInSamServer</function>
 	<function>SamQueryInformationUser</function>
@@ -238,14 +396,17 @@
 	<function>SamRidToSid</function>
 	<function>SamLookupDomainInSamServer</function>
 	<function>SamGetAliasMembership</function>
+</lib>
 <lib name="wlanapi.dll" id='158'>
 	<function>WinDbgExtensionDllInit</function>
 	<function>ExtensionApiVersion</function>
 	<function>CheckVersion</function>
+</lib>
 <lib name="wab32.dll" id='159'>
 	<function>WABOpen</function>
 	<function>WABCreateIProp</function>
 	<function>WABOpenEx</function>
+</lib>
 <lib name="atl80.dll" id='160'>
 	<function>AtlComModuleGetClassObject</function>
 	<function>AtlComModuleRegisterServer</function>
@@ -274,8 +435,10 @@
 	<function>ServiceDllUnloadOnStop</function>
 	<function>SvchostPushServiceGlobals</function>
 	<function>System.Net.Sockets</function>
+</lib>
 <lib name="drprov.dll" id='162'>
 	<function>AVIFileWriteData</function>
+</lib>
 <lib name="ssleay32.dll" id='163'>
 	<function>SSL_CTX_check_private_key</function>
 	<function>SSL_CTX_ctrl</function>
@@ -350,6 +513,7 @@
 	<function>SSL_CTX_set_timeout</function>
 	<function>SSL_library_init</function>
 	<function>SSL_get1_session</function>
+</lib>
 <lib name="libeay32.dll" id='164'>
 	<function>ASN1_INTEGER_get</function>
 	<function>BIO_free</function>
@@ -511,6 +675,7 @@
 	<function>SHA256_Final</function>
 	<function>SHA256_Init</function>
 	<function>SHA256_Update</function>
+</lib>
 <lib name="packet.dll" id='165'>
 	<function>PacketAllocatePacket</function>
 	<function>PacketCloseAdapter</function>
@@ -544,14 +709,18 @@
 	<function>PacketSetReadTimeout</function>
 	<function>PacketSetSnapLen</function>
 	<function>PacketStopDriver</function>
+</lib>
 <lib name="mshtml.dll" id='166'>
+</lib>
 <lib name="cmdial32.dll" id='167'>
 	<function>InetDialHandler</function>
 	<function>CmCustomDialDlg</function>
 	<function>AutoDialFunc</function>
 	<function>CmReConnect</function>
+</lib>
 <lib name="esent.dll" id='168'>
 	<function>JetGetCounter</function>
+</lib>
 <lib name="odbc32.dll" id='169'>
 	<function>SQLAllocConnect</function>
 	<function>SQLAllocEnv</function>
@@ -663,13 +832,18 @@
 	<function>SQLNativeSql</function>
 	<function>SQLTablePrivileges</function>
 	<function>SQLDrivers</function>
+</lib>
 <lib name="winshfhc.dll" id='170'>
 	<function>EstimateFileRiskLevel</function>
+</lib>
 <lib name="netplwiz.dll" id='171'>
 	<function>PassportWizardRunDll</function>
+</lib>
 <lib name="shimgvw.dll" id='172'>
 	<function>ImageRecompress</function>
+</lib>
 <lib name="xmllite.dll" id='173'>
+</lib>
 <lib name="wldap32.dll" id='174'>
 	<function>ldap_unbind</function>
 	<function>ldap_err2string</function>
@@ -764,6 +938,7 @@
 	<function>ldap_search_st</function>
 	<function>ldap_search_st</function>
 	<function>ldap_set_option</function>
+</lib>
 <lib name="scarddlg.dll" id='175'>
 	<function>GetOpenCardName</function>
 	<function>GetOpenCardName</function>
@@ -772,7 +947,9 @@
 	<function>SCardUIDlgSelectCard</function>
 	<function>SCardListInterfaces</function>
 	<function>SCardSetCardTypeProviderName</function>
+</lib>
 <lib name="sisbkup.dll" id='176'>
+</lib>
 <lib name="mswsock.dll" id='177'>
 	<function>NPLoadNameSpaces</function>
 	<function>NPGetResourceParent</function>
@@ -786,6 +963,7 @@
 	<function>GetTypeByName</function>
 	<function>GetService</function>
 	<function>SetService</function>
+</lib>
 <lib name="wintrust.dll" id='178'>
 	<function>WinVerifyTrust</function>
 	<function>CryptCATGetAttrInfo</function>
@@ -796,6 +974,7 @@
 	<function>CryptCATAdminReleaseCatalogContext</function>
 	<function>CryptCATAdminReleaseContext</function>
 	<function>CryptCATAdminAcquireContext</function>
+</lib>
 <lib name="lsasrv.dll" id='179'>
 	<function>LsaGetLogonSessionData</function>
 	<function>LsaIRegisterNotification</function>
@@ -806,11 +985,15 @@
 	<function>LsaLookupPrivilegeName</function>
 	<function>PasswordChangeNotify</function>
 	<function>InitializeChangeNotify</function>
+</lib>
 <lib name="gdi32.dll" id='180'>
 	<function>EngLoadModule</function>
+</lib>
 <lib name="query.dll" id='181'>
 	<function>CICreateCommand</function>
+</lib>
 <lib name="security.dll" id='182'>
+</lib>
 <lib name="pdh.dll" id='183'>
 	<function>PdhOpenQuery</function>
 	<function>PdhAddCounter</function>
@@ -825,6 +1008,7 @@
 	<function>PdhBrowseCounters</function>
 	<function>SetSoftwareUpdateAdvertisementState</function>
 	<function>GetSoftwareUpdateInfo</function>
+</lib>
 <lib name="msvbvm60.dll" id='184'>
 	<function>ThunRTMain</function>
 	<function>__vbaCopyBytes</function>
@@ -1006,6 +1190,7 @@
 	<function>rtcCallByNameE1B6</function>
 	<function>rtcCreateObject2</function>
 	<function>rtcStrConvVar2</function>
+</lib>
 <lib name="odbccp32.dll" id='185'>
 	<function>SQLConfigDriver</function>
 	<function>SQLConfigDriver</function>
@@ -1061,6 +1246,7 @@
 	<function>SQLSetConnectAttr</function>
 	<function>SQLTables</function>
 	<function>SQLTransact</function>
+</lib>
 <lib name="kernel32.dll" id='186'>
 	<function>EnumerateLocalComputerNames</function>
 	<function>GetVDMCurrentDirectories</function>
@@ -2386,11 +2572,13 @@
 	<function>SetConsoleCursorInfo</function>
 	<function>WritePrivateProfileString</function>
 	<function>WSAStartup</function>
+</lib>
 <lib name="devmgr.dll" id='187'>
 	<function>DeviceProblemText</function>
 	<function>DeviceProblemWizard</function>
 	<function>DeviceCreateHardwarePage</function>
 	<function>DeviceProperties</function>
+</lib>
 <lib name="shlwapi.dll" id='188'>
 	<function>SHUnlockShared</function>
 	<function>SHEnumKeyEx</function>
@@ -2448,6 +2636,7 @@
 	<function>IStream_Copy</function>
 	<function>IStream_ReadStr</function>
 	<function>IStream_WriteStr</function>
+</lib>
 <lib name="mssign32.dll" id='189'>
 	<function>FreeCryptProvFromCert</function>
 	<function>FreeCryptProvFromCertEx</function>
@@ -2475,8 +2664,10 @@
 	<function>SpcGetCertFromKey</function>
 	<function>SpLsaModeInitialize</function>
 	<function>SpUserModeInitialize</function>
+</lib>
 <lib name="cscapi.dll" id='190'>
 	<function>CscSearchApiGetInterface</function>
+</lib>
 <lib name="urlmon.dll" id='191'>
 	<function>URLDownloadToCacheFile</function>
 	<function>URLOpenBlockingStream</function>
@@ -2524,6 +2715,7 @@
 	<function>HlinkSimpleNavigateToString"</function>
 	<function>HlinkTranslateURL"</function>
 	<function>HlinkUpdateStackItem"</function>
+</lib>
 <lib name="Userenv.dll" id='192'>
 	<function>CreateUserProfileEx</function>
 	<function>GetUserProfileDirectory</function>
@@ -2539,9 +2731,12 @@
 	<function>RsopSetPolicySettingStatus</function>
 	<function>RefreshPolicy</function>
 	<function>UnregisterGPNotification</function>
+</lib>
 <lib name="sensapi.dll" id='193'>
 	<function>IsNetworkAlive</function>
+</lib>
 <lib name="usbd.sys" id='194'>
+</lib>
 <lib name="scecli.dll" id='195'>
 	<function>DeltaNotify</function>
 	<function>InitializeChangeNotify</function>
@@ -2612,6 +2807,7 @@
 	<function>SceUpdateObjectInfo</function>
 	<function>SceUpdateSecurityProfile</function>
 	<function>SceWriteSecurityProfileInfo</function>
+</lib>
 <lib name="ole32.dll" id='196'>
 	<function>OleDuplicateData</function>
 	<function>CoTaskMemFree</function>
@@ -2660,11 +2856,13 @@
 	<function>OleFlushClipboard</function>
 	<function>OleSetClipboard</function>
 	<function>OleGetClipboard</function>
+</lib>
 <lib name="cygwin1.dll" id='197'>
 	<function>connect</function>
 	<function>recv</function>
 	<function>send</function>
 	<function>socket</function>
+</lib>
 <lib name="ws2_32.dll" id='198'>
 	<function>accept</function>
 	<function>bind</function>
@@ -2781,6 +2979,7 @@
 	<function>WSACleanup</function>
 	<function>__WSAFDIsSet</function>
 	<function>WEP</function>
+</lib>
 <lib name="wsock32.dll" id='199'>
 	<function>accept</function>
 	<function>bind</function>
@@ -2829,8 +3028,10 @@
 	<function>WSAStartup</function>
 	<function>WSACleanup</function>
 	<function>__WSAFDIsSet</function>
+</lib>
 <lib name="winmm.dll" id='200'>
 	<function>timeGetTime</function>
+</lib>
 <lib name="wship6.dll" id='201'>
 	<function>WSHAddressToString</function>
 	<function>WSHEnumProtocols</function>
@@ -2847,13 +3048,16 @@
 	<function>WSHOpenSocket</function>
 	<function>WSHSetSocketInformation</function>
 	<function>WSHStringToAddress</function>
+</lib>
 <lib name="Loadperf.dll.dll" id='202'>
 	<function>LoadPerfCounterTextStrings</function>
 	<function>LoadPerfCounterTextStrings</function>
 	<function>UnloadPerfCounterTextStrings</function>
 	<function>UnloadPerfCounterTextStrings</function>
+</lib>
 <lib name="clbcatq.dll" id='203'>
 	<function>CheckMemoryGates</function>
+</lib>
 <lib name="icmp.dll" id='204'>
 	<function>IcmpCreateFile</function>
 	<function>IcmpParseReplies</function>
@@ -2862,6 +3066,7 @@
 	<function>IcmpSendEcho2</function>
 	<function>do_echo_req</function>
 	<function>register_icmp</function>
+</lib>
 <lib name="wtsapi32.dll" id='205'>
 	<function>WTSDisconnectSession</function>
 	<function>WTSQuerySessionInformation</function>
@@ -2885,6 +3090,7 @@
 	<function>WTSRegisterSessionNotificationEx</function>
 	<function>WTSStartRemoteControlSession</function>
 	<function>WTSVirtualChannelPurgeInput</function>
+</lib>
 <lib name="winscard.dll" id='206'>
 	<function>SCardControl</function>
 	<function>SCardDisconnect</function>
@@ -2898,6 +3104,7 @@
 	<function>SCardAccessStartedEvent</function>
 	<function>SCardReleaseContext</function>
 	<function>SCardListReaders</function>
+</lib>
 <lib name="ntdll.dll" id='207'>
 	<function>NtSetQuotaInformationFile</function>
 	<function>NtSetInformationKey</function>
@@ -3209,6 +3416,7 @@
 	<function>KiIntSystemCall</function>
 	<function>KiFastSystemCallRet</function>
 	<function>KiFastSystemCall</function>
+</lib>
 <lib name="netapi32.dll" id='208'>
 	<function>NetJoinDomain</function>
 	<function>NetUseAdd</function>
@@ -3298,11 +3506,13 @@
 	<function>NetRemoteTOD</function>
 	<function>NetServerEnum</function>
 	<function>NetServiceEnum</function>
+</lib>
 <lib name="aclui.dll" id='209'>
 	<function>EditSecurity</function>
 	<function>EditSecurityAdvanced</function>
 	<function>EditResourceCondition</function>
 	<function>EditConditionalAceClaims</function>
+</lib>
 <lib name="comctl32.dll" id='210'>
 	<function>MenuHelp</function>
 	<function>GetEffectiveClientRect</function>
@@ -3322,6 +3532,7 @@
 	<function>DPA_Sort</function>
 	<function>DPA_CreateEx</function>
 	<function>AddMRUStringW</function>
+</lib>
 <lib name="cryptbase.dll" id='211'>
 	<function>SystemFunction001</function>
 	<function>SystemFunction002"</function>
@@ -3364,6 +3575,7 @@
 	<function>SystemFunction039</function>
 	<function>SystemFunction040</function>
 	<function>SystemFunction041</function>
+</lib>
 <lib name="winsta.dll" id='212'>
 	<function>WinStationGetLoggedOnCount</function>
 	<function>WinStationSendMessage</function>
@@ -3494,6 +3706,7 @@
 	<function>_WinStationShadowTargetSetup</function>
 	<function>_WinStationUpdateClientCachedCredentials</function>
 	<function>_WinStationUpdateSettings</function>
+</lib>
 <lib name="mprapi.dll" id='213'>
 	<function>DeletePort</function>
 	<function>MprAdminUserWrite</function>
@@ -3503,6 +3716,7 @@
 	<function>MprAdminUserRead</function>
 	<function>MprAdminUserOpen</function>
 	<function>MprAdminUserClose</function>
+</lib>
 <lib name="sfc.dll" id='214'>
 	<function>SfcIsFileProtected</function>
 	<function>SfcIsKeyProtected</function>
@@ -3512,6 +3726,7 @@
 	<function>SFCScan</function>
 	<function>SRSetRestorePoint</function>
 	<function>SfpVerifyFile</function>
+</lib>
 <lib name="atl90.dll" id='215'>
 	<function>AtlComModuleRegisterClassObjects</function>
 	<function>AtlComModuleRevokeClassObjects</function>
@@ -3522,6 +3737,7 @@
 	<function>AtlCallTermFunc</function>
 	<function>AtlSetPerUserRegistration</function>
 	<function>AtlGetPerUserRegistration</function>
+</lib>
 <lib name="winspool.drv" id='216'>
 	<function>EnumMonitors</function>
 	<function>GetDefaultPrinter</function>
@@ -3534,13 +3750,16 @@
 	<function>EnumPorts</function>
 	<function>GetPrinterDriverDirectory</function>
 	<function>GetPrintProcessorDirectory</function>
+</lib>
 <lib name="mscorlib.dll" id='217'>
 	<function>CreateDecryptor</function>
 	<function>CreateEncryptor</function>
 	<function>TripleDESCryptoServiceProvider</function>
+</lib>
 <lib name="system.dll" id='218'>
 	<function>HttpWebResponse</function>
 	<function>HttpWebRequest</function>
+</lib>
 <lib name="advapi32.dll" id='219'>
 	<function>SaferCloseLevel</function>
 	<function>SaferComputeTokenFromLevel</function>
@@ -3766,6 +3985,7 @@
 	<function>SystemFunction039</function>
 	<function>SystemFunction040</function>
 	<function>SystemFunction041</function>
+</lib>
 <lib name="secur32.dll" id='220'>
 	<function>EncryptMessage</function>
 	<function>DecryptMessage</function>
@@ -3788,6 +4008,7 @@
 	<function>EnumerateSecurityPackages</function>
 	<function>InitializeSecurityContext</function>
 	<function>InitSecurityInterface</function>
+</lib>
 <lib name="mpr.dll" id='221'>
 	<function>MultinetGetConnectionPerformance</function>
 	<function>WNetAddConnection</function>
@@ -3811,6 +4032,7 @@
 	<function>WNetGetConnection</function>
 	<function>WNetUseConnection</function>
 	<function>WNetDirectoryNotify</function>
+</lib>
 <lib name="winhttp.dll" id='222'>
 	<function>WinHttpCrackUrl</function>
 	<function>WinHttpSetTimeouts</function>
@@ -3834,8 +4056,10 @@
 	<function>WinHttpAddRequestHeaders</function>
 	<function>WinHttpSetStatusCallback</function>
 	<function>WinHttpCreateUrl</function>
+</lib>
 <lib name="apphelp.dll" id='223'>
 	<function>ApphelpCheckShellObject</function>
+</lib>
 <lib name="ntdsapi.dll" id='224'>
 	<function>DsListSites</function>
 	<function>DsFreePasswordCredentials</function>
@@ -3850,8 +4074,10 @@
 	<function>DsQuoteRdnValue</function>
 	<function>DsFreeSchemaGuidMap</function>
 	<function>DsReplicaSync</function>
+</lib>
 <lib name="shfolder.dll" id='225'>
 	<function></function>
+</lib>
 <lib name="nddeapi.dll" id='226'>
 	<function>NDdeShareAdd</function>
 	<function>NDdeShareDel</function>
@@ -3881,6 +4107,7 @@
 	<function>NDdeGetTrustedShare</function>
 	<function>NDdeSetTrustedShare</function>
 	<function>NDdeTrustedShareEnum</function>
+</lib>
 <lib name="shell32.dll" id='227'>
 	<function>SHGetMalloc</function>
 	<function>SHGetKnownFolderPath</function>
@@ -4055,6 +4282,7 @@
 	<function>SHRegSetValue</function>
 	<function>SHUnicodeToAnsiCPAlloc</function>
 	<function>RegisterShellHookWindow</function>
+</lib>
 <lib name="psapi.dll" id='228'>
 	<function>EmptyWorkingSet</function>
 	<function>EnumDeviceDrivers</function>
@@ -4077,14 +4305,17 @@
 	<function>GetWsChangesEx</function>
 	<function>QueryWorkingSet</function>
 	<function>QueryWorkingSetEx</function>
+</lib>
 <lib name="kernelbase.dll" id='229'>
 	<function>LoadStringByReference</function>
+</lib>
 <lib name="fwpuclnt.dll" id='230'>
 	<function>WSASetSocketPeerTargetName</function>
 	<function>WSADeleteSocketPeerTargetName</function>
 	<function>WSAImpersonateSocketPeer</function>
 	<function>WSAQuerySocketSecurity</function>
 	<function>WSARevertImpersonation</function>
+</lib>
 <lib name="mapi32.dll" id='231'>
 	<function>MAPILogonEx</function>
 	<function>MAPIAllocateBuffer</function>
@@ -4112,6 +4343,7 @@
 	<function>WrapCompressedRTFStream</function>
 	<function>RTFSync</function>
 	<function>MAPIAdminProfiles</function>
+</lib>
 <lib name="wininet.dll" id='232'>
 	<function>CommitUrlCacheEntry</function>
 	<function>InternetSetFilePointer</function>
@@ -4166,6 +4398,7 @@
 	<function>FtpRenameFile</function>
 	<function>FtpSetCurrentDirectory</function>
 	<function>ResumeSuspendedDownload</function>
+</lib>
 <lib name="rpcrt4.dll" id='233'>
 	<function>I_RpcMapWin32Status</function>
 	<function>UuidCreateSequential</function>
@@ -4228,6 +4461,7 @@
 	<function>NdrUserMarshalBufferSize</function>
 	<function>NdrUserMarshalFree</function>
 	<function>NdrUserMarshalMarshall</function>
+</lib>
 <lib name="setupapi.dll" id='234'>
 	<function>SetupQuerySpaceRequiredOnDrive</function>
 	<function>SetupDiGetSelectedDriver</function>
@@ -4249,6 +4483,7 @@
 	<function>SetupIterateCabinet</function>
 	<function>SetupDecompressOrCopyFile</function>
 	<function>SetupQueryInfFileInformation</function>
+</lib>
 <lib name="powrprof.dll" id='235'>
 	<function>CallNtPowerInformation</function>
 	<function>CanUserWritePwrScheme</function>
@@ -4342,6 +4577,7 @@
 	<function>WriteGlobalPwrPolicy</function>
 	<function>WriteProcessorPwrScheme</function>
 	<function>WritePwrScheme</function>
+</lib>
 <lib name="ntoskrnl.exe" id='236'>
 	<function>SePrivilegeCheck</function>
 	<function>KeTickCount</function>
@@ -4417,6 +4653,7 @@
 	<function>ZwDeleteFile</function>
 	<function>ZwWaitForSingleObject</function>
 	<function>ZwUnloadDriver</function>
+</lib>
 <lib name="user32.dll" id='237'>
 	<function>EnumWindProc</function>
 	<function>EnumChildWindProc</function>
@@ -4540,6 +4777,7 @@
 	<function>UnregisterMessagePumpHook</function>
 	<function>SwapMouseButton</function>
 	<function>VkKeyScan</function>
+</lib>
 <lib name="linkinfo.dll" id='238'>
 	<function>CreateLinkInfo</function>
 	<function>DestroyLinkInfo</function>
@@ -4550,10 +4788,12 @@
 	<function>CompareLinkInfoVolumes</function>
 	<function>CompareLinkInfoReferents</function>
 	<function>IsValidLinkInfo</function>
+</lib>
 <lib name="credui.dll" id='239'>
 	<function>CredUnPackAuthenticationBuffer</function>
 	<function>CredUIPromptForCredentials</function>
 	<function>CredUICmdLinePromptForCredentials</function>
+</lib>
 <lib name="gina" id='240'>
 	<function>WlxActivateUserShell</function>
 	<function>WlxDisconnectNotify</function>
@@ -4576,12 +4816,15 @@
 	<function>WlxShutdown</function>
 	<function>WlxStartApplication</function>
 	<function>WlxWkstaLockedSAS</function>
+</lib>
 <lib name="version.dll" id='241'>
 	<function>GetFileVersionInfoSize</function>
 	<function>GetFileVersionInfo</function>
 	<function>VerInstallFile</function>
+</lib>
 <lib name="mspdb80.dll" id='242'>
 	<function>PDBOpenValidate5</function>
+</lib>
 <lib name="msvcrt.dll" id='243'>
 	<function>_invoke_watson</function>
 	<function>malloc</function>
@@ -4992,16 +5235,20 @@
 	<function>_fstrcat</function>
 	<function>srand</function>
 	<function>rand</function>
+</lib>
 <lib name="msasn1.dll" id='244'>
 	<function>ASN1BERDecNull</function>
 	<function>ASN1BERDecEoid</function>
 	<function>ASN1BERDecBool</function>
 	<function>ASN1BERDecCheck</function>
 	<function>ASN1BERDecCharString</function>
+</lib>
 <lib name="ntshrui.dll" id='245'>
 	<function>GetNetResourceFromLocalPath</function>
 	<function>CanShareFolderW</function>
+</lib>
 <lib name="dhcpcsvc.dll" id='246'>
+</lib>
 <lib name="imagehlp.dll" id='247'>
 	<function>UpdateDebugInfoFileEx</function>
 	<function>CheckSumMappedFile</function>
@@ -5079,6 +5326,7 @@
 	<function>UnMapAndLoad</function>
 	<function>UnmapDebugInformation</function>
 	<function>UpdateDebugInfoFile</function>
+</lib>
 <lib name="wsnmp32.dll" id='248'>
 	<function>SnmpGetTranslateMode</function>
 	<function>SnmpSetTranslateMode</function>
@@ -5131,6 +5379,7 @@
 	<function>SnmpOidCopy</function>
 	<function>SnmpOidCompare</function>
 	<function>SnmpGetLastError</function>
+</lib>
 <lib name="crypt32.dll" id='249'>
 	<function>PFXImportCertStore</function>
 	<function>PFXExportCertStoreEx</function>
@@ -5260,12 +5509,15 @@
 	<function>CertAddCTLContextToStore</function>
 	<function>CertAddCRLLinkToStore</function>
 	<function>CertAddCRLContextToStore</function>
+</lib>
 <lib name="cryptdll.dll" id='250'>
 	<function>MD5Init</function>
 	<function>MD5Update</function>
 	<function>MD5Final</function>
+</lib>
 <lib name="msvfw32.dll" id='251'>
 	<function>VideoForWindowsVersion</function>
+</lib>
 <lib name="msi.dll" id='252'>
 	<function>MsiCloseAllHandles</function>
 	<function>MsiCloseHandle</function>
@@ -5451,11 +5703,13 @@
 	<function>MsiSourceListClearAllEx</function>
 	<function>MsiSourceListAddMediaDisk</function>
 	<function>MsiSourceListClearMediaDisk</function>
+</lib>
 <lib name="oledlg.dll" id='253'>
 	<function>OleUIAddVerbMenu</function>
 	<function>OleUIEditLinks</function>
 	<function>OleUIConvert</function>
 	<function>OleUIBusy</function>
+</lib>
 <lib name="usp10.dll" id='254'>
 	<function>ScriptBreak</function>
 	<function>ScriptStringOut</function>
@@ -5465,6 +5719,7 @@
 	<function>ScriptShape</function>
 	<function>ScriptFreeCache</function>
 	<function>ScriptPlace</function>
+</lib>
 <lib name="mscoree.dll" id='255'>
 	<function>CLRCreateInstance</function>
 	<function>CorBindToRuntime</function>
@@ -5473,6 +5728,7 @@
 	<function>Get_Random</function>
 	<function>Get_PSDrive</function>
 	<function>CreateEncryptor</function>
+</lib>
 <lib name="iphlpapi.dll" id='256'>
 	<function>SetTcpEntry</function>
 	<function>AllocateAndGetTcpExTableFromStack</function>
@@ -5533,6 +5789,7 @@
 	<function>_PfDeleteInterface@4</function>
 	<function>_PfCreateInterface@24</function>
 	<function>_PfAddFiltersToInterface@24</function>
+</lib>
 <lib name="dbghelp.dll" id='257'>
 	<function>EnumDirTree</function>
 	<function>SymFromAddr</function>
@@ -5569,7 +5826,9 @@
 	<function>SymGetSymNext64</function>
 	<function>SymGetSymPrev64</function>
 	<function>UnMapDebugInformation</function>
+</lib>
 <lib name="vaultsvc.dll" id='258'>
+</lib>
 <lib name="vaultcli.dll" id='259'>
 	<function>VaultAddItem</function>
 	<function>VaultCloseVault</function>
@@ -5598,9 +5857,11 @@
 	<function>VaultUnRegisterNotification</function>
 	<function>VaultUnloadVaults</function>
 	<function>VaultUnlockVault</function>
+</lib>
 <lib name="pstorec.dll" id='260'>
 	<function>PStoreCreateInstance</function>
 	<function>PStoreEnumProviders</function>
+</lib>
 <lib name="atl.dll" id='261'>
 	<function>AtlAdvise</function>
 	<function>AtlUnadvise</function>
@@ -5658,8 +5919,10 @@
 	<function>AtlAxCreateControlLicEx</function>
 	<function>AtlAxGetControl</function>
 	<function>AtlAxWinTerm</function>
+</lib>
 <lib name="rasapi32.dll" id='262'>
 	<function>RasEnumConnections</function>
+</lib>
 <lib name="oleaut32.dll" id='263'>
 	<function>SysAllocString</function>
 	<function>SysReAllocString</function>
@@ -5777,6 +6040,7 @@
 	<function>OleCreatePropertyFrame</function>
 	<function>OleLoadPicture</function>
 	<function>OleCreateFontIndirect</function>
+</lib>
 <lib name="dnsapi.dll" id='264'>
 	<function>DnsAcquireContextHandle</function>
 	<function>DnsCancelQuery</function>
@@ -5800,6 +6064,7 @@
 	<function>DnsValidateName</function>
 	<function>DnsValidateServerStatus</function>
 	<function>DnsWriteQuestionToBuffer</function>
+</lib>
 <lib name="avicap32.dll" id='265'>
 	<function>capControlCallback</function>
 	<function>capCreateCaptureWindow</function>
@@ -5809,11 +6074,13 @@
 	<function>capVideoStreamCallback</function>
 	<function>capWaveStreamCallback</function>
 	<function>capYieldCallback</function>
+</lib>
 <lib name="odbctrac.dll" id='266'>
 	<function>TraceReturn</function>
 	<function>TraceVersion</function>
 	<function>TraceSQLConnect</function>
 	<function>TraceSQLCancel</function>
+</lib>
 <lib name="samsrv.dll" id='267'>
 	<function>SamQueryInformationUse</function>
 	<function>SamIConnect</function>
@@ -5825,6 +6092,7 @@
 	<function>SamrOpenDomain</function>
 	<function>SamrOpenUser</function>
 	<function>SamrQueryInformationUser</function>
+</lib>
 <lib name="cabinet.dll" id='268'>
 	<function>GetDllVersion</function>
 	<function>DllGetVersion</function>
@@ -5840,7 +6108,9 @@
 	<function>FDICopy</function>
 	<function>FDIDestroy</function>
 	<function>FDITruncateCabinet</function>
+</lib>
 <lib name="rpcns4.dll" id='269'>
+</lib>
 <lib name="Au3Zip.dll" id='270'>
 	<function>AU3_GetPluginDetails</function>
 	<function>WinDetectHiddenText</function>
@@ -5869,6 +6139,7 @@
 	<function>_viExecCommand</function>
 	<function>_WinAPI_BroadcastSystemMessage</function>
 	<function>_WinAPI_SendMessageTimeout</function>
+</lib>
 <lib name="mfc42.dll" id='271'>
 	<function>CArchiveStream</function>
 	<function>CAsyncMonikerFile</function>
@@ -5958,6 +6229,7 @@
 	<function>COleControl::WindowProc</function>
 	<function>COlePropertyPage::WindowProc</function>
 	<function>CParkingWnd::WindowProc</function>
+</lib>
 <lib name="olepro32.dll" id='272'>
 	<function>OleIconToCursor</function>
 	<function>OleCreatePropertyFrameIndirect</function>
@@ -9423,7 +9695,6 @@
 	<string>Enigma Protector1</string>
 </lib>
 <lib name="if CPU hypervisor field is set using cpuid(0x1)" id='292'>
-	<function>cpuid_is_hypervisor</function>
 	<string>1Fh</string>
 	<string>		cpuid</string>
 </lib>
