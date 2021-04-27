@@ -36,6 +36,8 @@ public:
 
 	static vector<Technical*> getTecnicals();
 
+	static vector<Technical*> getTecnicalsString();
+
 	static string get_balise(string line);
 
 	static string get_balise_name(string line);

@@ -14,6 +14,7 @@ public:
 	NodeOperationAND(Node *nodeLeft, Node *nodeRight);
 
 	const bool isActivate() const;
+	const bool isCall() const;
 };
 
 #endif

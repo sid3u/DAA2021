@@ -12,6 +12,12 @@ void NodeSearch::setIntensity(int intensity) {
 	_intensity = intensity;
 }
 
+void NodeSearch::setCall(string str){
+	if(str.find("		call	ds:") != string::npos){
+		_isCall = true;
+	}	
+}
+
 void NodeSearch::decreaseIntensity() {
 
 	try {
@@ -28,6 +34,10 @@ NodeSearch::NodeSearch(const string target) : NodeSearch(target, NULL) {}
 const int NodeSearch::getIntensity() const {
 
 	return _intensity;
+}
+
+const bool NodeSearch::getCall() const {
+	return _isCall;
 }
 
 const string NodeSearch::getTarget() const {
@@ -59,7 +69,9 @@ void NodeSearch::search(string str) {
 	}
 	else if (str.find(getTarget()) != string::npos) {
 
+
 		setIntensity(ACTIVATION_INTENSITY);
+		setCall(str);
 	}
 
 	decreaseIntensity();
@@ -74,6 +86,11 @@ const bool NodeSearch::isActivate() const {
 
 	return getNode()->isActivate();
 }
+
+const bool NodeSearch::isCall() const{
+	return getCall();
+}
+
 
 const bool NodeSearch::isLeaf() const {
 

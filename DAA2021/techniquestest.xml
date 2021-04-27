@@ -9423,7 +9423,6 @@
 	<string>Enigma Protector1</string>
 </lib>
 <lib name="if CPU hypervisor field is set using cpuid(0x1)" id='292'>
-	<function>cpuid_is_hypervisor</function>
 	<string>1Fh</string>
 	<string>		cpuid</string>
 </lib>

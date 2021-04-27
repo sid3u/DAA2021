@@ -99,7 +99,7 @@ void create_file() {
 	std::string fct_name;
 	std::ifstream file("xml_file.xml");		//Fichier XML qui comporte le contenu des fichiers functions.xml et strings.xml de PeStudio
 
-	std::ofstream file_to_write("techniquestest.xml");		//Notre nouveau fichier XML
+	std::ofstream file_to_write("techniquesLib.xml");		//Notre nouveau fichier XML
 
 	int id = 0;
 
@@ -116,8 +116,16 @@ void create_file() {
 				if (get_balise(line) == "lib") {
 					lib_name = get_balise_name(line);
 					//Si c'est la premi�re ligne alors on ne ferme pas la balise
+					if (lib_name == "") {
 					
-					file_to_write << "<lib name=" <<'"'<< lib_name <<'"'<< " id='"<<id << "'>\n";
+						file_to_write << "<lib name=" <<'"'<< lib_name <<'"'<< " id='"<<id << "'>\n";
+
+					}
+					else {
+						file_to_write << "</lib>\n<lib name=" <<'"'<< lib_name <<'"'<< " id='"<<id << "'>\n";
+					}
+
+					
 
 
 					id++;
@@ -143,16 +151,16 @@ void create_file() {
 
 					fct_name = get_balise_content(line);
 
-					file_to_write << "\t<string>" << fct_name << "</string>\n";
+					file_to_write << "\t<string>" <<'"'<< fct_name <<'"'<< "</string>\n";
 				}
 
 				
 
-			}
+			}file_to_write << "</lib>";
 		}
 
 		//On ferme la derni�re balise
-		file_to_write << "</lib>";
+		//file_to_write << "</lib>";
 
 		file_to_write.close();
 		file.close();

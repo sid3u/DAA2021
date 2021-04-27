@@ -142,13 +142,14 @@ std::string Tool::get_balise_id(std::string line) {
 	return balise_id;
 }
 
+// On créer une nouvelle liste de techniques représentant uniquement les librairies et les fonctions
 vector<Technical*> Tool::getTecnicals() {
 
 	vector<Technical*> technicals;
 	int id = 0;
 	int nb_nodes = 0;
 	Node *node;
-	Node *nodeString;
+
 	std::string line;
 
 	std::string balise;
@@ -157,51 +158,48 @@ vector<Technical*> Tool::getTecnicals() {
 	std::string lib_name = "";
 	std::string fct_name = "";
 
-	std::string lib = "";
 	std::string lib_string = "";
 	std::string lib_string2 = "";
+
 	std::string function = "";
 	std::string function_string = "";
+
 	std::string description = "";
-	std::string chaine_de_caracteres = "";
+
 
 	std::ifstream file("techniquestest.xml");
 
 	//On parcourt le fichier
 	if (file.is_open()) {
 
-		//La toute première technique :
-		/*
-		node = new NodeSearch(lib_name);
-		node = new NodeSearch(fct_name, node);
-		
-		*/
-
 		//On récupère chaque ligne du fichier XML
 		while (getline(file, line)) {
 
-			//FONCTIONNEL
-			//Si c'est une balise technique (le début de la technique)
+			//Si c'est une balise lib (le début de la librairie)
 			if (get_balise(line) == "lib" || get_raw_balise(line) == "lib") {
 
-				
+				//On réinitialise le nombre de noeuds à 0
 				nb_nodes = 0;
 				//std::cout << "On va créer une nouvelle technique" << std::endl;
 
-				//On récup l'id de cette technique
-				id++;
+				//On récup l'id et le nom de cette librairie
+				id = std::stoi(get_balise_id(line));
 				lib_name = get_balise_name(line);
+
+				// le fichier .asm fait appele aux librairies de 2 façons
 				lib_string='"'+get_balise_name(line)+'"';
 				lib_string2='<'+get_balise_name(line)+'>';
-				
+
+				//std::cout << id << std::endl;
+				// Si le nom de la librairie est vide on ne crée pas de technique sur son nom
 				if (lib_name != ""){
 					node = new NodeOperationOR(new NodeSearch(lib_string), new NodeSearch(lib_string2));
 					technicals.push_back(new Technical(id, lib_name, node));
 				}
 				
 			}
-			//FONCTIONNEL
-			//On arrive à la fin de la technique. On peut donc la construire
+
+			//On arrive à la fin de la librairie.
 			else if (get_balise(line) == "/lib" || get_raw_balise(line) == "/lib") {
 		
 				lib_name = "";
@@ -213,54 +211,112 @@ vector<Technical*> Tool::getTecnicals() {
 
 				
 				if (get_raw_balise(line) == "function" && get_balise_content(line) != "") {
-					//Pour le moment on utilise juste une variable mais il va falloir stocker dans un vecteur puisqu'on peut avoir plusieurs fonctions
+					//On récup le nom de la fonction. 
+					//Elle sera appelée dans le fichier .asm soit avec un call, soit sous forme de string
 					function ="		call	ds:" + get_balise_content(line);
 					function_string='"'+get_balise_content(line)+'"';
+					
 					fct_name = get_balise_content(line);
-					//std::cout << "function : " << function << std::endl;
+					//std::cout << "function : " << fct_name << std::endl;
 					
 					if(lib_name != ""){		//S'il existe une librairie
-						//std::cout << "node = new NodeOperationOR(new NodeSearch("<<function<<"), node);"<< std::endl;
+						
 						description = lib_name + " -> " + fct_name;
 						
-						
-						//node = new NodeSearch(function);		//On crée un OU logique avec le noeud précédent et le nouveau
-						//nodeString = new NodeSearch(function_string);
-
+						//On crée un OU logique avec les 2 types d'appels de la fonction
 						node = new NodeOperationOR(new NodeSearch(function),new NodeSearch(function_string));	
-
+						//std::cout << "node = new NodeOperationOR(new NodeSearch("<<function<<"),new NodeSearch("<<function_string<<"));"<< std::endl;
 						technicals.push_back(new Technical(id, description, node));
-						//technicals.push_back(new Technical(id, description, nodeString));
 					}
 					
-					else if (lib_name == ""){ 	
-						description ="No Library " + fct_name;	//Si aucun librairie n'est spécifiée
-						 	//S'il n'existe pas encore de noeuds
-						node = new NodeSearch(function);	//Alors on en crée un nouveau
+					else if (lib_name == ""){ 	//Si aucun librairie n'est spécifiée
+						description ="No Library " + fct_name;	
+						 
+						 //On crée un nouveau noeud
+						node = new NodeSearch(function);	
 							//std::cout << "node = new NodeSearch("<<function<<");"<< std::endl;
 						technicals.push_back(new Technical(id, description, node));
 					}
-					
 
 					nb_nodes++;	//On incrémente ici car dans tous les cas on crée un nouveau noeud
 					
 
 				}
-/*
-				else if (get_raw_balise(line) == "string") {
+
+			}
+		}
+
+		file.close();
+	}
+	//std::cout << "Termine !" << std::endl;
+	return technicals;
+}
+
+// On créer une nouvelle liste de techniques représentant uniquement les strings
+vector<Technical*> Tool::getTecnicalsString() {
+
+	vector<Technical*> technicals;
+	int id = 0;
+	int nb_nodes = 0;
+	Node *node;
+	
+	std::string line;
+
+	std::string balise;
+	std::string balise_content;
+
+	std::string lib_name = "";
+
+	std::string description = "";
+
+	std::string chaine_de_caracteres = "";
+
+	std::ifstream file("techniquestest.xml");
+
+	//On parcourt le fichier
+	if (file.is_open()) {
+
+		//On récupère chaque ligne du fichier XML
+		while (getline(file, line)) {
+
+			//Si c'est une balise lib (le début de la librairie)
+			if (get_balise(line) == "lib" || get_raw_balise(line) == "lib") {
+
+				//On réinitialise le nombre de noeuds à 0
+				nb_nodes = 0;
+				//std::cout << "On va créer une nouvelle technique" << std::endl;
+
+				//On récup l'id et le nom de cette librairie
+				id = std::stoi(get_balise_id(line));
+				lib_name = get_balise_name(line);
+				
+			}
+			//On arrive à la fin de la libraire.
+			else if (get_balise(line) == "/lib" || get_raw_balise(line) == "/lib") {
+		
+				lib_name = "";
+				description = "";
+				//system("PAUSE");
+			}
+
+			else {
+
+				if (get_raw_balise(line) == "string") {
+					//On récup le contenu du string
 					chaine_de_caracteres = get_balise_content(line);
 					
+					description = lib_name + " : " + chaine_de_caracteres;
 					
-					description = lib_name + " -> " + chaine_de_caracteres;
-					 	//S'il n'existe pas encore de noeuds
-					node = new NodeSearch(chaine_de_caracteres);	//Alors on en crée un nouveau
-						//std::cout << "node = new NodeSearch("<<chaine_de_caracteres<<");"<< std::endl;
-					technicals.push_back(new Technical(id, description, node));
+					//On crée un nouveau noeud
+					node = new NodeSearch(chaine_de_caracteres);
+
+					//std::cout << "node = new NodeSearch("<<chaine_de_caracteres<<");"<< std::endl;
+					technicals.push_back(new Technical(id++, description, node));
 					
 					
-					nb_nodes++;
-					//std::cout << "chaine_de_caracteres : " << chaine_de_caracteres << std::endl;
-				}*/
+					nb_nodes++; 	//On incrémente ici car dans tous les cas on crée un nouveau noeud
+					
+				}
 			}
 		}
 

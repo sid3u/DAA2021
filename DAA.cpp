@@ -7,7 +7,7 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-
+	string res="";
 	cout << "DoubleAntiAnalysis for windows. A Anti anti analysis scanner.\n";
 	cout << "Usage: DoubleAntiAnalysis.exe PATH/malware\n\n";
 
@@ -39,6 +39,7 @@ int main(int argc, char *argv[]) {
 	cout << "[+] Scan for " << name << ".asm ...\n";
 
 	vector<Technical*> technicals = Tool::getTecnicals();
+	vector<Technical*> technicalsString = Tool::getTecnicalsString();
 
 	string line;
 	ifstream myfile(name + ".asm");
@@ -56,6 +57,14 @@ int main(int argc, char *argv[]) {
 						technical->getNode()->search(line);
 					}
 				}
+
+				for (Technical *technicalS : technicalsString) {
+
+					if (!technicalS->getNode()->isActivate()) {
+
+						technicalS->getNode()->search(line);
+					}
+				}
 			}
 		}
 
@@ -67,26 +76,41 @@ int main(int argc, char *argv[]) {
 	}
 
 	int maxNameSize = Tool::getMaxSizeNames(technicals), cpt_detection = 0;
+
+	int maxNameSizeString = Tool::getMaxSizeNames(technicalsString), cpt_detectionString = 0;
+
 	PatchCommand *patch_command = NULL;
 
 	cout << "\n";
-	cout << "---------------[Technical detail]---------------\n";
+	cout << "---------------[Technical detail as LIBRARY or FUNCTION]---------------\n";
 	for (Technical *technical : technicals) {
 
-		
-
 		if (technical->getNode()->isActivate()) {
-
+			
 			cout << technical->getName();
+			
+			if(technical->getNode()->isCall()){
+				res = "[CALL FUNCTION]\n";
+			}
+			else if(!(technical->getName().find(" ->")!= string::npos)){
+				res = "[CALL LIBRARY]\n";
+			}
+			else{ 
+				res = "[STRING]\n";
+			}
+			
 
 		for (int i = 0; i < maxNameSize - (int)technical->getName().size(); i++) {
 
 			cout << " ";
 		}
 
-		cout << "\t\t";
-
-			cout << "[TRUE]\n";
+		cout << "\t";
+			
+			
+			cout << res;
+			
+			
 			cpt_detection++;
 
 			if (technical->hasAPatch()) {
@@ -97,6 +121,55 @@ int main(int argc, char *argv[]) {
 	}
 
 	cout << "\n\n[*] Technical detected: " << cpt_detection << "/" << technicals.size();
+
+	printString:
+	cout << "\n[*] Do you want de see the suspicous string list [Y/N] ? ";
+
+		cin >> answer;
+
+		switch (answer) {
+
+			case 'Y':
+			case 'y':
+				cout << "\n---------------[Technical detail as STRING]---------------\n";
+				for (Technical *technicalS : technicalsString) {
+
+					if (technicalS->getNode()->isActivate()) {
+						
+						cout << technicalS->getName();
+						
+
+					for (int i = 0; i < maxNameSize - (int)technicalS->getName().size(); i++) {
+
+						cout << " ";
+					}
+
+					cout << "\t";
+						
+						
+						cout << "[STRING]\n";
+						
+						
+						cpt_detectionString++;
+
+						if (technicalS->hasAPatch()) {
+
+							patch_command = technicalS->getPatchCommand();
+						}
+					}
+				}
+
+			case 'N':
+			case 'n':
+				break;
+
+			default:
+			goto printString;
+			break;
+
+		}
+	cout << "\n\n[*] Technical detected: " << cpt_detectionString << "/" << technicalsString.size();
+
 
 	if (!Tool::isAnAsmFile(path) && patch_command != NULL) {
 
@@ -123,6 +196,10 @@ int main(int argc, char *argv[]) {
 	for (Technical *technical : technicals) {
 
 		delete technical;
+	}
+	for (Technical *technicalS : technicalsString) {
+
+		delete technicalS;
 	}
 
 	cout << "\n\n";

@@ -14,8 +14,10 @@ private:
 	Node *_node;
 	string _target;
 	int _intensity;
+	bool _isCall = false;
 
 	void setIntensity(int intensity);
+	void setCall(string str);
 	void decreaseIntensity();
 
 public:
@@ -28,10 +30,12 @@ public:
 	const Node *getNode() const;
 	const string getTarget() const;
 	const int getIntensity() const;
+	const bool getCall() const;
 
 	vector<Node*> getDescendants();
 	void search(string str);
 	const bool isActivate() const;
+	const bool isCall() const;
 
 	const bool isLeaf() const;
 

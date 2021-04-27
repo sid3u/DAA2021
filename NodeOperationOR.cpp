@@ -8,3 +8,8 @@ const bool NodeOperationOR::isActivate() const {
 
 	return getNodeLeft()->isActivate() || getNodeRight()->isActivate();
 }
+
+const bool NodeOperationOR::isCall() const {
+
+	return getNodeLeft()->isCall() || getNodeRight()->isCall();
+}
