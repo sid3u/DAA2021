@@ -127,7 +127,7 @@ NodeSearch::operator string() const {
 
 const bool NodeSearch::verificar(string phrase, string mot) const{ 
 	
-	int pos = phrase.find(mot);   
+	/*int pos = phrase.find(mot);   
     std::regex const pattern{ "[a-zA-Z0-9]+" };
     if (pos - 1 > -1) {      
        if(std::regex_match(&phrase[pos - 1] , pattern)) { return false; }   
@@ -136,5 +136,24 @@ const bool NodeSearch::verificar(string phrase, string mot) const{
         if (std::regex_match(&phrase[pos + mot.size()], pattern)) { return false; }
     }
 
-	return true;   
+	return true;   */
+
+	int pos = phrase.find(mot);
+    string premiere = "";
+    string derniere = "";
+ 
+   std::regex const pattern{ "[[:alnum:]]" };
+
+    if (pos - 1 > -1) {
+         premiere += phrase[pos - 1];
+        if (std::regex_match(premiere, pattern)) {  return false; }
+    }
+
+
+    if (pos + mot.size() <= phrase.size()) {
+
+        derniere += phrase[pos + mot.size()];
+        if (std::regex_match(derniere, pattern)) { return false; }
+    }
+    return true;
 }
