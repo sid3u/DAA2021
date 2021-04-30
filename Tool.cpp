@@ -168,7 +168,7 @@ vector<Technical*> Tool::getTecnicals() {
 	std::string description = "";
 
 
-	std::ifstream file("techniquestest.xml");
+	std::ifstream file("techniques.xml");
 
 	//On parcourt le fichier
 	if (file.is_open()) {
@@ -272,7 +272,7 @@ vector<Technical*> Tool::getTecnicalsString() {
 
 	std::string chaine_de_caracteres = "";
 
-	std::ifstream file("techniquestest.xml");
+	std::ifstream file("techniques.xml");
 
 	//On parcourt le fichier
 	if (file.is_open()) {

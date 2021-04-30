@@ -114,23 +114,23 @@ void create_file() {
 
 				//Si c'est une balise lib
 				if (get_balise(line) == "lib") {
-
+					lib_name = get_balise_name(line);
 					//Si c'est la premi�re ligne alors on ne ferme pas la balise
 					if (lib_name == "") {
-						file_to_write << "<technique id='" << id << "'>\n";
+					
+						file_to_write << "<lib name=" <<'"'<< lib_name <<'"'<< " id='"<<id << "'>\n";
 
 					}
 					else {
-						file_to_write << "</technique>\n<technique id='" << id << "'>\n";
+						file_to_write << "</lib>\n<lib name=" <<'"'<< lib_name <<'"'<< " id='"<<id << "'>\n";
 					}
+
+					
+
 
 					id++;
 
-					//On sauvegarde cette balise
-					lib_name = get_balise_name(line);
-
-					file_to_write << "\t<lib>" << lib_name << "</lib>\n";
-
+					
 				}
 				//Sinon si c'est une fonction alors on va r�cup�rer son contenu
 				else if (get_balise(line) == "fct") {
@@ -138,12 +138,11 @@ void create_file() {
 					file_to_write << "\t<function>" << fct_name << "</function>\n";
 
 				}
-
 				//On check si la balise est dans le vecteur balises
 				else if (std::find(balises.begin(), balises.end(), get_raw_balise(line)) != balises.end()) {
 
 					//On cr�e une nouvelle technique
-					file_to_write << "</technique>\n<technique id='" << id << "'>\n\t<description>" << get_raw_balise(line) << "</description>\n";
+					file_to_write << "</lib>\n<lib name="<<'"'<< get_raw_balise(line) <<'"'<< " id='" << id << "'>\n";
 
 					id++;
 				}
@@ -155,12 +154,13 @@ void create_file() {
 					file_to_write << "\t<string>" << fct_name << "</string>\n";
 				}
 
+				
 
-			}
+			}file_to_write << "</lib>";
 		}
 
 		//On ferme la derni�re balise
-		file_to_write << "</technique>";
+		//file_to_write << "</lib>";
 
 		file_to_write.close();
 		file.close();
