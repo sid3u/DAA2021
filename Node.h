@@ -15,6 +15,7 @@ class Node {
 public:
 
 	void virtual search(string str) = 0;
+	void virtual searchString(string str) = 0;
 	const virtual bool isActivate() const = 0;
 	const virtual bool isCall() const = 0;
 	vector<Node*> virtual getDescendants() = 0;

@@ -2,6 +2,7 @@
 
 #include "Tool.h"
 
+
 //Rajouter aussi l'en-tête des fonctions dans Tool.h
 
 vector<string> Tool::explode(string const &s, char delim) {
@@ -325,3 +326,5 @@ vector<Technical*> Tool::getTecnicalsString() {
 	//std::cout << "Termine !" << std::endl;
 	return technicals;
 }
+
+

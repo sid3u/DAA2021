@@ -4,6 +4,8 @@
 #define DEF_NODE_SEARCH
 
 #include "Node.h"
+#include "Tool.h"
+#include <regex>
 
 using namespace std;
 
@@ -34,8 +36,10 @@ public:
 
 	vector<Node*> getDescendants();
 	void search(string str);
+	void searchString(string str);
 	const bool isActivate() const;
 	const bool isCall() const;
+	const bool verificar(string phrase, string mot) const;
 
 	const bool isLeaf() const;
 

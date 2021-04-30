@@ -77,6 +77,23 @@ void NodeSearch::search(string str) {
 	decreaseIntensity();
 }
 
+void NodeSearch::searchString(string str) {
+
+	if (!isLeaf() && getIntensity() > 0) {
+
+		_node->search(str);
+	}
+	else if (str.find(getTarget()) != string::npos) {
+
+		if(verificar(str, getTarget())){
+			setIntensity(ACTIVATION_INTENSITY);
+		}
+		setCall(str);
+	}
+
+	decreaseIntensity();
+}
+
 const bool NodeSearch::isActivate() const {
 
 	if (isLeaf()) {
@@ -97,6 +114,7 @@ const bool NodeSearch::isLeaf() const {
 	return getNode() == NULL;
 }
 
+
 NodeSearch::operator string() const {
 
 	ostringstream os;
@@ -104,4 +122,19 @@ NodeSearch::operator string() const {
 	os << "target=" << getTarget() << ", intensity=" << getIntensity() << ", node=" << (*_node);
 
 	return os.str();
+}
+
+
+const bool NodeSearch::verificar(string phrase, string mot) const{ 
+	
+	int pos = phrase.find(mot);   
+    std::regex const pattern{ "[a-zA-Z0-9]+" };
+    if (pos - 1 > -1) {      
+       if(std::regex_match(&phrase[pos - 1] , pattern)) { return false; }   
+    }
+    else if (pos + mot.size() > phrase.size() - 1) {
+        if (std::regex_match(&phrase[pos + mot.size()], pattern)) { return false; }
+    }
+
+	return true;   
 }

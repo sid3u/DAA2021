@@ -62,7 +62,7 @@ int main(int argc, char *argv[]) {
 
 					if (!technicalS->getNode()->isActivate()) {
 
-						technicalS->getNode()->search(line);
+						technicalS->getNode()->searchString(line);
 					}
 				}
 			}
@@ -81,43 +81,95 @@ int main(int argc, char *argv[]) {
 
 	PatchCommand *patch_command = NULL;
 
+
 	cout << "\n";
-	cout << "---------------[Technical detail as LIBRARY or FUNCTION]---------------\n";
-	for (Technical *technical : technicals) {
+			cout << "---------------[Technical detail as LIBRARY]---------------\n";
+			for (Technical *technical : technicals) {
 
-		if (technical->getNode()->isActivate()) {
+				if (technical->getNode()->isActivate() && !(technical->getName().find(" ->")!= string::npos) ) {
+				
+					
+						cout << technical->getName();
+						
+
+
+					for (int i = 0; i < maxNameSize - (int)technical->getName().size(); i++) {
+
+						cout << " ";
+					}
+
+					cout << "\t";
 			
-			cout << technical->getName();
 			
-			if(technical->getNode()->isCall()){
+					cout << "[CALL LIBRARY]\n";
+			
+			
+					//cpt_detection++;
+
+					if (technical->hasAPatch()) {
+
+						patch_command = technical->getPatchCommand();
+					}
+				}
+			}
+
+
+	printFunction:
+	cout << "\n[*] Do you want to see the suspicous function list [Y/N] ? ";
+
+		cin >> answer;
+
+		switch (answer) {
+
+			case 'Y':
+			case 'y':
+
+			cout << "\n";
+			cout << "---------------[Technical detail as LIBRARY or FUNCTION]---------------\n";
+			for (Technical *technical : technicals) {
+
+			if (technical->getNode()->isActivate()) {
+			
+				cout << technical->getName();
+			
+				if(technical->getNode()->isCall()){
 				res = "[CALL FUNCTION]\n";
-			}
-			else if(!(technical->getName().find(" ->")!= string::npos)){
-				res = "[CALL LIBRARY]\n";
-			}
-			else{ 
-				res = "[STRING]\n";
-			}
+				}
+				else if(!(technical->getName().find(" ->")!= string::npos)){
+					res = "[CALL LIBRARY]\n";
+				}
+				else{ 
+					res = "[STRING]\n";
+				}
 			
 
-		for (int i = 0; i < maxNameSize - (int)technical->getName().size(); i++) {
+				for (int i = 0; i < maxNameSize - (int)technical->getName().size(); i++) {
 
-			cout << " ";
+					cout << " ";
+				}
+
+				cout << "\t";
+			
+			
+				cout << res;
+			
+			
+				cpt_detection++;
+
+				if (technical->hasAPatch()) {
+
+					patch_command = technical->getPatchCommand();
+				}
+			}
+
 		}
+		case 'N':
+			case 'n':
+				break;
 
-		cout << "\t";
-			
-			
-			cout << res;
-			
-			
-			cpt_detection++;
-
-			if (technical->hasAPatch()) {
-
-				patch_command = technical->getPatchCommand();
-			}
-		}
+			default:
+			goto printFunction;
+			break;
 	}
 
 	cout << "\n\n[*] Technical detected: " << cpt_detection << "/" << technicals.size();

@@ -26,6 +26,7 @@ public:
 
 	vector<Node*> getDescendants();
 	void search(string str);
+	void searchString(string str);
 
 	operator string() const;
 };

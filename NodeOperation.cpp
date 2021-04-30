@@ -54,6 +54,11 @@ void NodeOperation::search(string str) {
 	_nodeRight->search(str);
 }
 
+void NodeOperation::searchString(string str) {
+
+	_nodeLeft->search(str);
+	_nodeRight->search(str);
+}
 NodeOperation::operator string() const {
 
 	ostringstream os;

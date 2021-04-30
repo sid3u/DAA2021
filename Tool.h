@@ -11,6 +11,7 @@
 #include <iterator>
 #include <map>
 
+
 #include "NodeSearch.h"
 #include "NodeOperationAND.h"
 #include "NodeOperationOR.h"
