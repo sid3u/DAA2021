@@ -81,7 +81,6 @@ int main(int argc, char *argv[]) {
 
 	PatchCommand *patch_command = NULL;
 
-
 	cout << "\n";
 			cout << "---------------[Technical detail as LIBRARY]---------------\n";
 			for (Technical *technical : technicals) {

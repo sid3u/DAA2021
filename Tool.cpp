@@ -312,7 +312,7 @@ vector<Technical*> Tool::getTecnicalsString() {
 					node = new NodeSearch(chaine_de_caracteres);
 
 					//std::cout << "node = new NodeSearch("<<chaine_de_caracteres<<");"<< std::endl;
-					technicals.push_back(new Technical(id++, description, node));
+					technicals.push_back(new Technical(id, description, node));
 					
 					
 					nb_nodes++; 	//On incrémente ici car dans tous les cas on crée un nouveau noeud
